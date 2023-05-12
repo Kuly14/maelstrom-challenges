@@ -110,10 +110,10 @@ impl Node<BroadcastPayload> for BroadcastNode {
                 write_message(reply, &mut writer)?;
                 return Ok(());
             }
-            _ => {}
+            _ => {
+                return Ok(());
+            }
         }
-
-        Err(anyhow::anyhow!("FAILD"))
     }
 }
 
